@@ -26,6 +26,7 @@ main {
     /* padding-left: 60px; */
 
     box-sizing: border-box;
+    position: relative;
 
 }
 
@@ -239,6 +240,7 @@ main {
     align-items: flex-start;
 
     gap: 50px;
+    margin-bottom: 55px;
 }
 
 /* .rooms .room img,
@@ -267,8 +269,22 @@ main {
     margin-bottom: 90px;
 }
 
+.rooms .room .info .description,
+.holl .hotel-holl .info .description {
+    max-width: 520px;
+    color: #3F3E45;
+    font-family: 'Lora';
+    font-size: 17px;
+    line-height: 1.6;
+    margin: -65px 0 70px;
+}
+
 .holl .hotel-holl .info h1 {
     margin-bottom: 35px;
+}
+
+.holl .hotel-holl .info .description {
+    margin: -12px 0 28px;
 }
 
 .rooms .room .info .include,
@@ -347,6 +363,16 @@ main {
     margin-left: 10px;
 }
 
+.rooms .room .info .price span,
+.holl .hotel-holl .info .price span {
+    color: #3F3E45;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
+
 .holl .hotel-holl .info .price h2 {
     font-size: 36px;
 }
@@ -365,11 +391,18 @@ main {
 }
 
 .rooms .room .info .price h2::after {
-    content: 'грн / ніч';
+    content: '';
 }
 
 .holl .hotel-holl .info .price::after {
-    content: 'грн';
+    content: '';
+}
+
+.empty-state {
+    color: #3F3E45;
+    font-family: 'Lora';
+    font-size: 18px;
+    text-align: center;
 }
 
 
@@ -849,7 +882,7 @@ main {
     .home .info a {
         font-size: 18px;
 
-        padding: 10px 15зч;
+        padding: 10px 15px;
     }
 
     .rooms,
@@ -860,6 +893,12 @@ main {
     .rooms .room .info h1,
     .holl .hotel-holl .info h1 {
         font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    .rooms .room .info .description,
+    .holl .hotel-holl .info .description {
+        margin: -15px 0 35px;
     }
 
     .rooms .room .info .include .incl p,

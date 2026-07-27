@@ -1,0 +1,346 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vodogray 1.0\n"
+"Language: uk\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "Vodogray Hotel"
+msgstr "Готель Водограй"
+
+msgid "Vodogray Admin"
+msgstr "Адмін-панель Водограй"
+
+msgid "Vodogray Hotel Admin"
+msgstr "Адмін-панель готелю Водограй"
+
+msgid "Book a Room"
+msgstr "Забронювати номер"
+
+msgid "Navigation"
+msgstr "Навігація"
+
+msgid "Home"
+msgstr "Головна"
+
+msgid "History"
+msgstr "Історія"
+
+msgid "Cottages"
+msgstr "Номери"
+
+msgid "Banquet Halls"
+msgstr "Бенкетні зали"
+
+msgid "Contacts"
+msgstr "Контакти"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "A hotel where comfort meets the warmth of home"
+msgstr "Готель, де комфорт поєднується з домашнім затишком"
+
+msgid "Cozy rooms, delicious cuisine, and hospitality in the heart of Kyiv"
+msgstr "Приємні номери, смачна кухня та гостинність у серці Києва"
+
+msgid "View Cottages"
+msgstr "Переглянути номери"
+
+msgid "Vodogray Hotel and Cafe"
+msgstr "Готель-кафе Водограй"
+
+msgid "Vodogray. All rights reserved."
+msgstr "Водограй. Всі права захищені."
+
+msgid "Kyiv, Ravutskoho St. 7"
+msgstr "м. Київ, вул. Равуцького 7"
+
+msgid "Follow Us"
+msgstr "Ми в соцмережах"
+
+msgid "Vodogray"
+msgstr "Водограй"
+
+msgid "About Us"
+msgstr "Про нас"
+
+msgid "More than a hotel"
+msgstr "Більше, ніж готель"
+
+msgid "We created a place where every guest feels at home. For many years, we have welcomed guests by combining comfort, quality service, and a warm atmosphere."
+msgstr "Ми створили місце, де кожен гість відчуває себе як вдома. Уже багато років ми приймаємо гостей, поєднуючи комфорт, якісний сервіс і теплу атмосферу."
+
+msgid "Our hotel is care in the details, homemade cuisine, and sincere hospitality."
+msgstr "Наш готель - це турбота в деталях, смачна домашня кухня та щира гостинність."
+
+msgid "years of experience"
+msgstr "років досвіду"
+
+msgid "happy guests"
+msgstr "задоволених гостей"
+
+msgid "guest reception"
+msgstr "прийом гостей"
+
+msgid "About the Hotel"
+msgstr "Про готель"
+
+msgid "Comfortable rooms"
+msgstr "Комфортні номери"
+
+msgid "Ukrainian cuisine cafe"
+msgstr "Кафе української кухні"
+
+msgid "Guest parking"
+msgstr "Паркінг для гостей"
+
+msgid "Wi-Fi throughout the property"
+msgstr "Wi-Fi на всій території"
+
+msgid "Daily cleaning"
+msgstr "Щоденне прибирання"
+
+msgid "Breakfast included"
+msgstr "Сніданки включено"
+
+msgid "From"
+msgstr "Від"
+
+msgid "UAH / night"
+msgstr "грн / ніч"
+
+msgid "UAH"
+msgstr "грн"
+
+msgid "Booking from"
+msgstr "Бронювання від"
+
+msgid "Our History"
+msgstr "Наша історія"
+
+msgid "Over 20 years of hospitality and homelike comfort"
+msgstr "Понад 20 років гостинності та домашнього затишку"
+
+msgid "Build Route"
+msgstr "Побудувати маршрут"
+
+msgid "Daily 00:00 - 24:00"
+msgstr "Щодня 00:00 - 24:00"
+
+msgid "Cottages will appear on the site soon."
+msgstr "Номери скоро з'являться на сайті."
+
+msgid "Banquet halls will appear on the site soon."
+msgstr "Бенкетні зали скоро з'являться на сайті."
+
+msgid "From a small roadside complex to a modern hotel with comfortable rooms and a cozy cafe, our path has been shaped by work, growth, and a desire to give guests warmth."
+msgstr "Від невеликого придорожнього комплексу до сучасного готелю з комфортними номерами та затишним кафе наш шлях був наповнений працею, розвитком і бажанням дарувати гостям тепло."
+
+msgid "Today, Vodogray combines Ukrainian hospitality with European service."
+msgstr "Сьогодні Водограй поєднує українську гостинність та європейський сервіс."
+
+msgid "The Beginning"
+msgstr "Початок історії"
+
+msgid "This was the year when the history of Vodogray Hotel and Cafe began."
+msgstr "Саме з цього року розпочалася історія готелю-кафе Водограй."
+
+msgid "Cozy Cafe"
+msgstr "Затишне кафе"
+
+msgid "Vodogray cafe offers delicious Ukrainian cuisine, traditional recipes, and a warm atmosphere."
+msgstr "Кафе Водограй - це смачна українська кухня, традиційні рецепти та тепла атмосфера."
+
+msgid "Comfort for Everyone"
+msgstr "Комфорт для кожного"
+
+msgid "Our rooms combine convenience, cleanliness, and comfort."
+msgstr "Наші номери поєднують зручність, чистоту та затишок."
+
+msgid "Thanks to Our Guests"
+msgstr "Подяка гостям"
+
+msgid "We are grateful to every guest for their trust and choice."
+msgstr "Ми вдячні кожному гостю за довіру та вибір."
+
+msgid "Our Team"
+msgstr "Наша команда"
+
+msgid "A professional team works every day to make your stay comfortable."
+msgstr "Команда професіоналів щодня працює для вашого комфортного відпочинку."
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Sign In"
+msgstr "Увійти"
+
+msgid "Sign in to manage cottages, halls, and photos."
+msgstr "Увійдіть, щоб керувати номерами, залами та фото."
+
+msgid "View Site"
+msgstr "На сайт"
+
+msgid "Log Out"
+msgstr "Вийти"
+
+msgid "Admin Panel"
+msgstr "Панель керування"
+
+msgid "Site Content"
+msgstr "Контент сайту"
+
+msgid "These records appear in the Cottages section on the homepage."
+msgstr "Ці записи відображаються у секції номерів на головній сторінці."
+
+msgid "Add Cottage"
+msgstr "Додати номер"
+
+msgid "Manage halls, pricing, capacity, and available booking date."
+msgstr "Керуйте залами, ціною, місткістю та датою доступного бронювання."
+
+msgid "Add Hall"
+msgstr "Додати залу"
+
+msgid "Photos"
+msgstr "Фото"
+
+msgid "Photos can be linked to either a cottage or a banquet hall."
+msgstr "Фото можна прив'язати або до номера, або до бенкетної зали."
+
+msgid "Add Photo"
+msgstr "Додати фото"
+
+msgid "No cottages yet."
+msgstr "Номерів ще немає."
+
+msgid "No halls yet."
+msgstr "Залів ще немає."
+
+msgid "No photos yet."
+msgstr "Фото ще немає."
+
+msgid "July 9, 2026"
+msgstr "09 липня 2026"
+
+msgid "%(num)s cottage"
+msgid_plural "%(num)s cottages"
+msgstr[0] "%(num)s номер"
+msgstr[1] "%(num)s номери"
+msgstr[2] "%(num)s номерів"
+
+msgid "%(num)s hall"
+msgid_plural "%(num)s halls"
+msgstr[0] "%(num)s зала"
+msgstr[1] "%(num)s зали"
+msgstr[2] "%(num)s залів"
+
+msgid "%(num)s photo"
+msgid_plural "%(num)s photos"
+msgstr[0] "%(num)s фото"
+msgstr[1] "%(num)s фото"
+msgstr[2] "%(num)s фото"
+
+msgid "Name (Ukrainian)"
+msgstr "Назва (українською)"
+
+msgid "Name (English)"
+msgstr "Назва (англійською)"
+
+msgid "Description (Ukrainian)"
+msgstr "Опис (українською)"
+
+msgid "Description (English)"
+msgstr "Опис (англійською)"
+
+msgid "Features (Ukrainian, one per line)"
+msgstr "Зручності українською, кожна з нового рядка"
+
+msgid "Features (English, one per line)"
+msgstr "Зручності англійською, кожна з нового рядка"
+
+msgid "Price"
+msgstr "Ціна"
+
+msgid "Capacity"
+msgstr "Місткість"
+
+msgid "Booking From"
+msgstr "Бронювання від"
+
+msgid "Show on site"
+msgstr "Показувати на сайті"
+
+msgid "Create"
+msgstr "Створити"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "Photo URL"
+msgstr "URL фото"
+
+msgid "Alt Text"
+msgstr "Alt текст"
+
+msgid "Sort Order"
+msgstr "Порядок"
+
+msgid "Cottage"
+msgstr "Номер"
+
+msgid "Hall"
+msgstr "Зала"
+
+msgid "Photo"
+msgstr "Фото"
+
+msgid "Login successful."
+msgstr "Вхід виконано успішно."
+
+msgid "Invalid login or password."
+msgstr "Невірний логін або пароль."
+
+msgid "You have logged out of the admin panel."
+msgstr "Ви вийшли з адмін-панелі."
+
+msgid "Cottage has been added."
+msgstr "Номер додано."
+
+msgid "Cottage has been updated."
+msgstr "Номер оновлено."
+
+msgid "Cottage has been deleted."
+msgstr "Номер видалено."
+
+msgid "Hall has been added."
+msgstr "Залу додано."
+
+msgid "Hall has been updated."
+msgstr "Залу оновлено."
+
+msgid "Hall has been deleted."
+msgstr "Залу видалено."
+
+msgid "Photo has been added."
+msgstr "Фото додано."
+
+msgid "Photo has been updated."
+msgstr "Фото оновлено."
+
+msgid "Photo has been deleted."
+msgstr "Фото видалено."

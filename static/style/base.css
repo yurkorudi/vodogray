@@ -27,3 +27,24 @@ button{
 .index section{
     margin-bottom: 60px;
 }
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-switch a {
+    border: 1px solid rgba(189, 151, 101, .55);
+    border-radius: 6px;
+    color: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 7px 9px;
+}
+
+.lang-switch a.active {
+    background: #BD9765;
+    color: #ffffff;
+}

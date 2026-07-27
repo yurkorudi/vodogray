@@ -1,36 +1,27 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vodogray Hotell</title>
-    <link rel="stylesheet" href="static/style/base.css">
-    <link rel="stylesheet" href="static/style/header.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Literata:opsz,wght@7..72,200..900&family=Lora:wght@400..700&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100..900&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
-</head>
 <header>
-    <a href="#rooms">Забронювати номер</a>
+    <a href="#rooms">{{ _("Book a Room") }}</a>
 
     <div class="phone">
-        <img src="static/img/phone.png" alt="">
+        <img src="{{ url_for('static', filename='img/phone.png') }}" alt="">
         <p>+380 97 688 67 71</p>
     </div>
 
     <nav class="nav">
-        <h1>Навігація</h1>
+        <h1>{{ _("Navigation") }}</h1>
 
-        <a href="#home">Головна</a>
-        <a href="#history">Історія</a>
-        <a href="#rooms">Номери</a>
-        <a href="#history">Галерея</a>
+        <a href="#home">{{ _("Home") }}</a>
+        <a href="#history">{{ _("History") }}</a>
+        <a href="#rooms">{{ _("Cottages") }}</a>
+        <a href="#holl">{{ _("Banquet Halls") }}</a>
     </nav>
 
-    <button class="burger" aria-label="Меню">
+    {% include "language_switcher.html" %}
+
+    <button class="burger" aria-label="{{ _('Menu') }}">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
-    <script src="static/js/nav.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
 </header>

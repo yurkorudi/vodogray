@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vodogray 1.0\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Vodogray Hotel"
+msgstr "Vodogray Hotel"
+
+msgid "Vodogray Admin"
+msgstr "Vodogray Admin"
+
+msgid "Vodogray Hotel Admin"
+msgstr "Vodogray Hotel Admin"
+
+msgid "Book a Room"
+msgstr "Book a Room"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "History"
+msgstr "History"
+
+msgid "Cottages"
+msgstr "Rooms"
+
+msgid "Banquet Halls"
+msgstr "Banquet Halls"
+
+msgid "Contacts"
+msgstr "Contacts"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "A hotel where comfort meets the warmth of home"
+msgstr "A hotel where comfort meets the warmth of home"
+
+msgid "Cozy rooms, delicious cuisine, and hospitality in the heart of Kyiv"
+msgstr "Cozy rooms, delicious cuisine, and hospitality in the heart of Kyiv"
+
+msgid "View Cottages"
+msgstr "View Rooms"
+
+msgid "Vodogray Hotel and Cafe"
+msgstr "Vodogray Hotel and Cafe"
+
+msgid "Vodogray. All rights reserved."
+msgstr "Vodogray. All rights reserved."
+
+msgid "Kyiv, Ravutskoho St. 7"
+msgstr "Kyiv, Ravutskoho St. 7"
+
+msgid "Follow Us"
+msgstr "Follow Us"
+
+msgid "Vodogray"
+msgstr "Vodogray"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "More than a hotel"
+msgstr "More than a hotel"
+
+msgid "From"
+msgstr "From"
+
+msgid "UAH / night"
+msgstr "UAH / night"
+
+msgid "UAH"
+msgstr "UAH"
+
+msgid "Booking from"
+msgstr "Booking from"
+
+msgid "Build Route"
+msgstr "Build Route"
+
+msgid "Daily 00:00 - 24:00"
+msgstr "Daily 00:00 - 24:00"
+
+msgid "Cottages will appear on the site soon."
+msgstr "Rooms will appear on the site soon."
+
+msgid "Banquet halls will appear on the site soon."
+msgstr "Banquet halls will appear on the site soon."
+
+msgid "We created a place where every guest feels at home. For many years, we have welcomed guests by combining comfort, quality service, and a warm atmosphere."
+msgstr "We created a place where every guest feels at home. For many years, we have welcomed guests by combining comfort, quality service, and a warm atmosphere."
+
+msgid "Our hotel is care in the details, homemade cuisine, and sincere hospitality."
+msgstr "Our hotel is care in the details, homemade cuisine, and sincere hospitality."
+
+msgid "years of experience"
+msgstr "years of experience"
+
+msgid "happy guests"
+msgstr "happy guests"
+
+msgid "guest reception"
+msgstr "guest reception"
+
+msgid "About the Hotel"
+msgstr "About the Hotel"
+
+msgid "Comfortable rooms"
+msgstr "Comfortable rooms"
+
+msgid "Ukrainian cuisine cafe"
+msgstr "Ukrainian cuisine cafe"
+
+msgid "Guest parking"
+msgstr "Guest parking"
+
+msgid "Wi-Fi throughout the property"
+msgstr "Wi-Fi throughout the property"
+
+msgid "Daily cleaning"
+msgstr "Daily cleaning"
+
+msgid "Breakfast included"
+msgstr "Breakfast included"
+
+msgid "Our History"
+msgstr "Our History"
+
+msgid "Over 20 years of hospitality and homelike comfort"
+msgstr "Over 20 years of hospitality and homelike comfort"
+
+msgid "From a small roadside complex to a modern hotel with comfortable rooms and a cozy cafe, our path has been shaped by work, growth, and a desire to give guests warmth."
+msgstr "From a small roadside complex to a modern hotel with comfortable rooms and a cozy cafe, our path has been shaped by work, growth, and a desire to give guests warmth."
+
+msgid "Today, Vodogray combines Ukrainian hospitality with European service."
+msgstr "Today, Vodogray combines Ukrainian hospitality with European service."
+
+msgid "The Beginning"
+msgstr "The Beginning"
+
+msgid "This was the year when the history of Vodogray Hotel and Cafe began."
+msgstr "This was the year when the history of Vodogray Hotel and Cafe began."
+
+msgid "Cozy Cafe"
+msgstr "Cozy Cafe"
+
+msgid "Vodogray cafe offers delicious Ukrainian cuisine, traditional recipes, and a warm atmosphere."
+msgstr "Vodogray cafe offers delicious Ukrainian cuisine, traditional recipes, and a warm atmosphere."
+
+msgid "Comfort for Everyone"
+msgstr "Comfort for Everyone"
+
+msgid "Our rooms combine convenience, cleanliness, and comfort."
+msgstr "Our rooms combine convenience, cleanliness, and comfort."
+
+msgid "Thanks to Our Guests"
+msgstr "Thanks to Our Guests"
+
+msgid "We are grateful to every guest for their trust and choice."
+msgstr "We are grateful to every guest for their trust and choice."
+
+msgid "Our Team"
+msgstr "Our Team"
+
+msgid "A professional team works every day to make your stay comfortable."
+msgstr "A professional team works every day to make your stay comfortable."
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Sign In"
+msgstr "Sign In"
+
+msgid "Sign in to manage cottages, halls, and photos."
+msgstr "Sign in to manage rooms, halls, and photos."
+
+msgid "View Site"
+msgstr "View Site"
+
+msgid "Log Out"
+msgstr "Log Out"
+
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+msgid "Site Content"
+msgstr "Site Content"
+
+msgid "These records appear in the Cottages section on the homepage."
+msgstr "These records appear in the Rooms section on the homepage."
+
+msgid "Add Cottage"
+msgstr "Add Room"
+
+msgid "Manage halls, pricing, capacity, and available booking date."
+msgstr "Manage halls, pricing, capacity, and available booking date."
+
+msgid "Add Hall"
+msgstr "Add Hall"
+
+msgid "Photos"
+msgstr "Photos"
+
+msgid "Photos can be linked to either a cottage or a banquet hall."
+msgstr "Photos can be linked to either a room or a banquet hall."
+
+msgid "Add Photo"
+msgstr "Add Photo"
+
+msgid "No cottages yet."
+msgstr "No rooms yet."
+
+msgid "No halls yet."
+msgstr "No halls yet."
+
+msgid "No photos yet."
+msgstr "No photos yet."
+
+msgid "July 9, 2026"
+msgstr "July 9, 2026"
+
+msgid "%(num)s cottage"
+msgid_plural "%(num)s cottages"
+msgstr[0] "%(num)s room"
+msgstr[1] "%(num)s rooms"
+
+msgid "%(num)s hall"
+msgid_plural "%(num)s halls"
+msgstr[0] "%(num)s hall"
+msgstr[1] "%(num)s halls"
+
+msgid "%(num)s photo"
+msgid_plural "%(num)s photos"
+msgstr[0] "%(num)s photo"
+msgstr[1] "%(num)s photos"
+
+msgid "Name (Ukrainian)"
+msgstr "Name (Ukrainian)"
+
+msgid "Name (English)"
+msgstr "Name (English)"
+
+msgid "Description (Ukrainian)"
+msgstr "Description (Ukrainian)"
+
+msgid "Description (English)"
+msgstr "Description (English)"
+
+msgid "Features (Ukrainian, one per line)"
+msgstr "Features (Ukrainian, one per line)"
+
+msgid "Features (English, one per line)"
+msgstr "Features (English, one per line)"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Capacity"
+msgstr "Capacity"
+
+msgid "Booking From"
+msgstr "Booking From"
+
+msgid "Show on site"
+msgstr "Show on site"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Photo URL"
+msgstr "Photo URL"
+
+msgid "Alt Text"
+msgstr "Alt Text"
+
+msgid "Sort Order"
+msgstr "Sort Order"
+
+msgid "Cottage"
+msgstr "Room"
+
+msgid "Hall"
+msgstr "Hall"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "Login successful."
+msgstr "Login successful."
+
+msgid "Invalid login or password."
+msgstr "Invalid login or password."
+
+msgid "You have logged out of the admin panel."
+msgstr "You have logged out of the admin panel."
+
+msgid "Cottage has been added."
+msgstr "Room has been added."
+
+msgid "Cottage has been updated."
+msgstr "Room has been updated."
+
+msgid "Cottage has been deleted."
+msgstr "Room has been deleted."
+
+msgid "Hall has been added."
+msgstr "Hall has been added."
+
+msgid "Hall has been updated."
+msgstr "Hall has been updated."
+
+msgid "Hall has been deleted."
+msgstr "Hall has been deleted."
+
+msgid "Photo has been added."
+msgstr "Photo has been added."
+
+msgid "Photo has been updated."
+msgstr "Photo has been updated."
+
+msgid "Photo has been deleted."
+msgstr "Photo has been deleted."

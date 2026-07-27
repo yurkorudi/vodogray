@@ -1,42 +1,39 @@
-<head>
-    <link rel="stylesheet" href="static/style/base.css">
-    <link rel="stylesheet" href="static/style/footer.css">
-</head>
 <footer>
     <section class="info">
         <div class="foter-title">
-            <h1>Водограй</h1>
-            <p>Готель-кафе Водограй</p>
+            <h1>{{ _("Vodogray") }}</h1>
+            <p>{{ _("Vodogray Hotel and Cafe") }}</p>
         </div>
 
         <div class="footer-smm">
-            <p>ⒸВодограй всі права захищені</p>
+            <p>{{ _("Vodogray. All rights reserved.") }}</p>
             <a>with love, SmmAge</a>
         </div>
     </section>
 
     <section class="map">
-        <h1>Навігація</h1>
+        <h1>{{ _("Navigation") }}</h1>
 
-        <a href="#home">Головна</a>
-        <a href="#history">Історія</a>
-        <a href="#rooms">Номери</a>
-        <a href="#history">Галерея</a>
+        <a href="#home">{{ _("Home") }}</a>
+        <a href="#history">{{ _("History") }}</a>
+        <a href="#rooms">{{ _("Cottages") }}</a>
+        <a href="#holl">{{ _("Banquet Halls") }}</a>
     </section>
 
     <section class="footer_contacts">
-        <h1>Контакти</h1>
+        <h1>{{ _("Contacts") }}</h1>
         <p>+380 97 688 67 71</p>
         <a href="">@instagram</a>
-        <p>м. Київ вул. Равуцького 7</p>
+        <p>{{ _("Kyiv, Ravutskoho St. 7") }}</p>
     </section>
 
     <section class="socialmedia">
-        <h1>Ми в соцмережах</h1>
+        <h1>{{ _("Follow Us") }}</h1>
 
         <div class="media">
-            <a href=""><img src="static/img/instagram.png" alt=""></a>
-            <a href=""><img src="static/img/telegram.png" alt=""></a>
+            <a href=""><img src="{{ url_for('static', filename='img/instagram.png') }}" alt=""></a>
+            <a href=""><img src="{{ url_for('static', filename='img/telegram.png') }}" alt=""></a>
         </div>
+        {% include "language_switcher.html" %}
     </section>
 </footer>

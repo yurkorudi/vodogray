@@ -1,0 +1,82 @@
+# Translations template for Vodogray.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vodogray 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Flask-Babel\n"
+
+msgid "Vodogray Hotel"
+msgstr ""
+
+msgid "Vodogray Admin"
+msgstr ""
+
+msgid "Book a Room"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "History"
+msgstr ""
+
+msgid "Cottages"
+msgstr ""
+
+msgid "Banquet Halls"
+msgstr ""
+
+msgid "Contacts"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "A hotel where comfort meets the warmth of home"
+msgstr ""
+
+msgid "Cozy rooms, delicious cuisine, and hospitality in the heart of Kyiv"
+msgstr ""
+
+msgid "View Cottages"
+msgstr ""
+
+msgid "About Us"
+msgstr ""
+
+msgid "More than a hotel"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "UAH / night"
+msgstr ""
+
+msgid "UAH"
+msgstr ""
+
+msgid "Booking from"
+msgstr ""
+
+msgid "Build Route"
+msgstr ""
+
+msgid "Login successful."
+msgstr ""
+
+msgid "Invalid login or password."
+msgstr ""
+
+msgid "Cottage has been added."
+msgstr ""
+
+msgid "Hall has been added."
+msgstr ""
+
+msgid "Photo has been added."
+msgstr ""

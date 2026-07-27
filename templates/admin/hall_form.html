@@ -1,0 +1,36 @@
+<label class="form-label">{{ _("Name (Ukrainian)") }}</label>
+<input class="form-control" name="name_uk" required>
+
+<label class="form-label">{{ _("Name (English)") }}</label>
+<input class="form-control" name="name_en">
+
+<label class="form-label">{{ _("Description (Ukrainian)") }}</label>
+<textarea class="form-control" name="description_uk" rows="3"></textarea>
+
+<label class="form-label">{{ _("Description (English)") }}</label>
+<textarea class="form-control" name="description_en" rows="3"></textarea>
+
+<div class="row">
+    <div class="col-md-6">
+        <label class="form-label">{{ _("Price") }}</label>
+        <input class="form-control" type="number" name="price" min="0" value="0">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">{{ _("Capacity") }}</label>
+        <input class="form-control" type="number" name="capacity" min="0">
+    </div>
+</div>
+
+<label class="form-label">{{ _("Booking From") }}</label>
+<input class="form-control" name="booking_from" placeholder="{{ _('July 9, 2026') }}">
+
+<label class="form-label">{{ _("Features (Ukrainian, one per line)") }}</label>
+<textarea class="form-control" name="features_uk" rows="5"></textarea>
+
+<label class="form-label">{{ _("Features (English, one per line)") }}</label>
+<textarea class="form-control" name="features_en" rows="5"></textarea>
+
+<label class="form-check">
+    <input class="form-check-input" type="checkbox" name="is_active" checked>
+    <span class="form-check-label">{{ _("Show on site") }}</span>
+</label>

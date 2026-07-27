@@ -1,0 +1,27 @@
+<label class="form-label">{{ _("Title") }}</label>
+<input class="form-control" name="title">
+
+<label class="form-label">{{ _("Photo URL") }}</label>
+<input class="form-control" name="image_url" placeholder="/static/img/vodogray.png" required>
+
+<label class="form-label">{{ _("Alt Text") }}</label>
+<input class="form-control" name="alt_text">
+
+<label class="form-label">{{ _("Sort Order") }}</label>
+<input class="form-control" type="number" name="sort_order" value="0">
+
+<label class="form-label">{{ _("Cottage") }}</label>
+<select class="form-select" name="cottage_id">
+    <option value="">-</option>
+    {% for cottage in cottages %}
+    <option value="{{ cottage.id }}">{{ cottage.localized_name }}</option>
+    {% endfor %}
+</select>
+
+<label class="form-label">{{ _("Hall") }}</label>
+<select class="form-select" name="hall_id">
+    <option value="">-</option>
+    {% for hall in halls %}
+    <option value="{{ hall.id }}">{{ hall.localized_name }}</option>
+    {% endfor %}
+</select>

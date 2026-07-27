@@ -48,6 +48,15 @@ header a {
     font-family: 'Montserrat';
 }
 
+header .lang-switch {
+    margin-left: 16px;
+}
+
+header .lang-switch a {
+    padding: 8px 10px;
+    background-color: rgba(50, 48, 45, .45);
+}
+
 .nav {
 
     display: none;
@@ -86,9 +95,15 @@ header a {
 
     }
 
-    header a,
+    header > a,
     header .phone {
         display: none;
+    }
+
+    header .lang-switch {
+        margin-left: auto;
+        margin-right: 18px;
+        z-index: 1001;
     }
 
     .burger {

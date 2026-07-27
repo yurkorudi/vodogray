@@ -1,63 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ current_language }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vodogray Admin</title>
-    <link rel="stylesheet" href="static/style/admin/login.css">
-    <link rel="stylesheet" href="static/style/admin/admin.css">
+    <title>{{ _("Vodogray Admin") }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/admin/admin.css') }}">
 </head>
 
-<body>
-    <section class="sing-in" id="sing-in">
-        <h1>Vodogray Hotell Admin</h1>
+<body class="admin-body">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="toast-wrap">
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} shadow-sm mb-2">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
 
-        <form action="" method="post">
-            <label for="userLogin">Login</label>
-            <input type="text" name="login" id="userLogin" placeholder="Enter login">
+    {% if mode == "login" %}
+    <main class="login-page">
+        <section class="login-card">
+            <div class="language-switcher">
+                {% include "language_switcher.html" %}
+            </div>
+            <h1>{{ _("Vodogray Hotel Admin") }}</h1>
+            <p>{{ _("Sign in to manage cottages, halls, and photos.") }}</p>
+            <form action="{{ url_for('admin.admin') }}" method="post">
+                <label for="userLogin" class="form-label">{{ _("Login") }}</label>
+                <input type="text" name="login" id="userLogin" class="form-control" placeholder="admin" required>
 
-            <label for="userPassword">Password</label>
-            <input type="password" name="password" id="userPassword" placeholder="Enter password">
+                <label for="userPassword" class="form-label">{{ _("Password") }}</label>
+                <input type="password" name="password" id="userPassword" class="form-control" placeholder="{{ _('Password') }}" required>
 
-            <button type="submit" id="submitBtn">Enter</button>
-        </form>
-    </section>
-
-    <section class="admin" id="admin">
-        <div class="admin-about-us">
-            <img src="static/img/vodogray.png" alt="">
-
-            <div class="info">
-                <h2>About Us block</h2>
-
-                <form action="" method="post">
-                    <input type="file" name="photo" id="">
-
-                    <button type="submit" id="load">Load</button>
+                <button type="submit" class="btn btn-primary w-100">{{ _("Sign In") }}</button>
+            </form>
+        </section>
+    </main>
+    {% else %}
+    <nav class="navbar navbar-expand-lg admin-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">{{ _("Vodogray Admin") }}</a>
+            <div class="nav-actions">
+                {% include "language_switcher.html" %}
+                <a class="btn btn-outline-light btn-sm" href="{{ url_for('index') }}">{{ _("View Site") }}</a>
+                <form action="{{ url_for('admin.logout') }}" method="post">
+                    <button class="btn btn-light btn-sm" type="submit">{{ _("Log Out") }}</button>
                 </form>
             </div>
-
         </div>
+    </nav>
 
-        <div class="admin-rooms">
-            <div class="admin-room">
-                <img src="static/img/vodogray.png" alt="">
+    <main class="admin-shell">
+        <section class="admin-hero">
+            <div>
+                <p>{{ _("Admin Panel") }}</p>
+                <h1>{{ _("Site Content") }}</h1>
+            </div>
+            <div class="stats">
+                <span>{{ ngettext("%(num)s cottage", "%(num)s cottages", cottages|length) }}</span>
+                <span>{{ ngettext("%(num)s hall", "%(num)s halls", halls|length) }}</span>
+                <span>{{ ngettext("%(num)s photo", "%(num)s photos", photos|length) }}</span>
+            </div>
+        </section>
 
-                <div class="info">
-                    <h2>Room jallery</h2>
+        <section class="admin-section" id="cottages">
+            <div class="section-title">
+                <h2>{{ _("Cottages") }}</h2>
+                <p>{{ _("These records appear in the Cottages section on the homepage.") }}</p>
+            </div>
 
-                    <form action="" method="post">
-                        <input type="file" name="photo" id="">
+            <div class="content-grid">
+                <form class="admin-card" action="{{ url_for('admin.create_cottage') }}" method="post">
+                    <h3>{{ _("Add Cottage") }}</h3>
+                    {% include "admin/cottage_form.html" %}
+                    <button class="btn btn-primary" type="submit">{{ _("Create") }}</button>
+                </form>
 
-                        <button type="submit" id="load">Load</button>
+                <div class="admin-card table-card">
+                    {% for cottage in cottages %}
+                    <form action="{{ url_for('admin.update_cottage', cottage_id=cottage.id) }}" method="post" class="edit-row">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Name (Ukrainian)") }}</label>
+                                <input class="form-control" name="name_uk" value="{{ cottage.name_uk or cottage.name }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Name (English)") }}</label>
+                                <input class="form-control" name="name_en" value="{{ cottage.name_en or '' }}">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Price") }}</label>
+                                <input class="form-control" type="number" name="price" value="{{ cottage.price }}" min="0">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Capacity") }}</label>
+                                <input class="form-control" type="number" name="capacity" value="{{ cottage.capacity or '' }}" min="0">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{{ _("Description (Ukrainian)") }}</label>
+                                <textarea class="form-control" name="description_uk" rows="2">{{ cottage.description_uk or cottage.description or "" }}</textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{{ _("Description (English)") }}</label>
+                                <textarea class="form-control" name="description_en" rows="2">{{ cottage.description_en or "" }}</textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Features (Ukrainian, one per line)") }}</label>
+                                <textarea class="form-control" name="features_uk" rows="5">{{ cottage.features_uk or cottage.features or "" }}</textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Features (English, one per line)") }}</label>
+                                <textarea class="form-control" name="features_en" rows="5">{{ cottage.features_en or "" }}</textarea>
+                            </div>
+                            <div class="col-12 row-actions">
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="is_active" {% if cottage.is_active %}checked{% endif %}>
+                                    <span class="form-check-label">{{ _("Show on site") }}</span>
+                                </label>
+                                <button class="btn btn-success" type="submit">{{ _("Save") }}</button>
+                            </div>
+                        </div>
                     </form>
+                    <form action="{{ url_for('admin.delete_cottage', cottage_id=cottage.id) }}" method="post" class="delete-form">
+                        <button class="btn btn-outline-danger btn-sm" type="submit">{{ _("Delete") }}</button>
+                    </form>
+                    {% else %}
+                    <p class="empty">{{ _("No cottages yet.") }}</p>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script type="module" src="static/js/admin/admin.js"></script>
+        <section class="admin-section" id="halls">
+            <div class="section-title">
+                <h2>{{ _("Banquet Halls") }}</h2>
+                <p>{{ _("Manage halls, pricing, capacity, and available booking date.") }}</p>
+            </div>
+
+            <div class="content-grid">
+                <form class="admin-card" action="{{ url_for('admin.create_hall') }}" method="post">
+                    <h3>{{ _("Add Hall") }}</h3>
+                    {% include "admin/hall_form.html" %}
+                    <button class="btn btn-primary" type="submit">{{ _("Create") }}</button>
+                </form>
+
+                <div class="admin-card table-card">
+                    {% for hall in halls %}
+                    <form action="{{ url_for('admin.update_hall', hall_id=hall.id) }}" method="post" class="edit-row">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Name (Ukrainian)") }}</label>
+                                <input class="form-control" name="name_uk" value="{{ hall.name_uk or hall.name }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Name (English)") }}</label>
+                                <input class="form-control" name="name_en" value="{{ hall.name_en or '' }}">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Price") }}</label>
+                                <input class="form-control" type="number" name="price" value="{{ hall.price }}" min="0">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Capacity") }}</label>
+                                <input class="form-control" type="number" name="capacity" value="{{ hall.capacity or '' }}" min="0">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Booking From") }}</label>
+                                <input class="form-control" name="booking_from" value="{{ hall.booking_from or '' }}">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{{ _("Description (Ukrainian)") }}</label>
+                                <textarea class="form-control" name="description_uk" rows="2">{{ hall.description_uk or hall.description or "" }}</textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{{ _("Description (English)") }}</label>
+                                <textarea class="form-control" name="description_en" rows="2">{{ hall.description_en or "" }}</textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Features (Ukrainian, one per line)") }}</label>
+                                <textarea class="form-control" name="features_uk" rows="5">{{ hall.features_uk or hall.features or "" }}</textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Features (English, one per line)") }}</label>
+                                <textarea class="form-control" name="features_en" rows="5">{{ hall.features_en or "" }}</textarea>
+                            </div>
+                            <div class="col-12 row-actions">
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="is_active" {% if hall.is_active %}checked{% endif %}>
+                                    <span class="form-check-label">{{ _("Show on site") }}</span>
+                                </label>
+                                <button class="btn btn-success" type="submit">{{ _("Save") }}</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="{{ url_for('admin.delete_hall', hall_id=hall.id) }}" method="post" class="delete-form">
+                        <button class="btn btn-outline-danger btn-sm" type="submit">{{ _("Delete") }}</button>
+                    </form>
+                    {% else %}
+                    <p class="empty">{{ _("No halls yet.") }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-section" id="photos">
+            <div class="section-title">
+                <h2>{{ _("Photos") }}</h2>
+                <p>{{ _("Photos can be linked to either a cottage or a banquet hall.") }}</p>
+            </div>
+
+            <div class="content-grid">
+                <form class="admin-card" action="{{ url_for('admin.create_photo') }}" method="post">
+                    <h3>{{ _("Add Photo") }}</h3>
+                    {% include "admin/photo_form.html" %}
+                    <button class="btn btn-primary" type="submit">{{ _("Create") }}</button>
+                </form>
+
+                <div class="admin-card photo-list">
+                    {% for photo in photos %}
+                    <form action="{{ url_for('admin.update_photo', photo_id=photo.id) }}" method="post" class="photo-row">
+                        <img src="{{ photo.image_url }}" alt="{{ photo.alt_text or photo.title or _('Photo') }}">
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Title") }}</label>
+                                <input class="form-control" name="title" value="{{ photo.title or '' }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ _("Photo URL") }}</label>
+                                <input class="form-control" name="image_url" value="{{ photo.image_url }}" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">{{ _("Alt Text") }}</label>
+                                <input class="form-control" name="alt_text" value="{{ photo.alt_text or '' }}">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">{{ _("Sort Order") }}</label>
+                                <input class="form-control" type="number" name="sort_order" value="{{ photo.sort_order }}">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Cottage") }}</label>
+                                <select class="form-select" name="cottage_id">
+                                    <option value="">-</option>
+                                    {% for cottage in cottages %}
+                                    <option value="{{ cottage.id }}" {% if photo.cottage_id == cottage.id %}selected{% endif %}>{{ cottage.localized_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">{{ _("Hall") }}</label>
+                                <select class="form-select" name="hall_id">
+                                    <option value="">-</option>
+                                    {% for hall in halls %}
+                                    <option value="{{ hall.id }}" {% if photo.hall_id == hall.id %}selected{% endif %}>{{ hall.localized_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-12 row-actions">
+                                <button class="btn btn-success" type="submit">{{ _("Save") }}</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="{{ url_for('admin.delete_photo', photo_id=photo.id) }}" method="post" class="delete-form">
+                        <button class="btn btn-outline-danger btn-sm" type="submit">{{ _("Delete") }}</button>
+                    </form>
+                    {% else %}
+                    <p class="empty">{{ _("No photos yet.") }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+    {% endif %}
 </body>
 
 </html>

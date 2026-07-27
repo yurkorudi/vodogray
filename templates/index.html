@@ -1,356 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ current_language }}">
 
 <head>
-    <link rel="stylesheet" href="static/style/rooms_slideshow.css">
-    <link rel="stylesheet" href="static/style/index.css">
-    <link rel="stylesheet" href="static/style/base.css">
-    <!-- <link rel="stylesheet" href="static/style/slider.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ _("Vodogray Hotel") }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/rooms_slideshow.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/footer.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Literata:opsz,wght@7..72,200..900&family=Lora:wght@400..700&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100..900&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     {% include "header.html" %}
 
     <main class="index">
-
         <section class="home" id="home">
             <div class="info">
-                <h1>Готель, де комфорт поєднується з домашнім затишком</h1>
-                <p>Приємні номери, смачна кухня та гостинність у серці Києва</p>
-                <a href="#rooms">Переглянути номери</a>
+                <h1>{{ _("A hotel where comfort meets the warmth of home") }}</h1>
+                <p>{{ _("Cozy rooms, delicious cuisine, and hospitality in the heart of Kyiv") }}</p>
+                <a href="#rooms">{{ _("View Cottages") }}</a>
             </div>
         </section>
 
         <section class="about us">
-            <img src="static/img/vodogray.png" alt="">
+            <img src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ _('Vodogray Hotel') }}">
 
             <div class="info">
-                <p>Про нас</p>
-                <h2>Більше, ніж готель</h2>
-                <p>Ми створили місце, де кожен гість відчуває себе як
-                    вдома. Вже багато років ми приймаємо гостей, поєднуючи
-                    комфорт, якісний сервіс і теплу атмосферу.</p>
-                <p>Наш готель - це про турботу в деталях, смачну домашню
-                    кухню та щиру гостинність.</p>
+                <p>{{ _("About Us") }}</p>
+                <h2>{{ _("More than a hotel") }}</h2>
+                <p>{{ _("We created a place where every guest feels at home. For many years, we have welcomed guests by combining comfort, quality service, and a warm atmosphere.") }}</p>
+                <p>{{ _("Our hotel is care in the details, homemade cuisine, and sincere hospitality.") }}</p>
 
                 <div class="stars">
                     <div class="star">
-                        <img src="static/img/stars.png" alt="">
+                        <img src="{{ url_for('static', filename='img/stars.png') }}" alt="">
                         <h2>15+</h2>
-                        <p>років досвіду</p>
+                        <p>{{ _("years of experience") }}</p>
                     </div>
-
                     <div class="star">
-                        <img src="static/img/guests.png" alt="">
+                        <img src="{{ url_for('static', filename='img/guests.png') }}" alt="">
                         <h2>1000+</h2>
-                        <p>задоволених гостей</p>
+                        <p>{{ _("happy guests") }}</p>
                     </div>
-
                     <div class="star">
-                        <img src="static/img/alltime.png" alt="">
+                        <img src="{{ url_for('static', filename='img/alltime.png') }}" alt="">
                         <h2>24/7</h2>
-                        <p>прийом гостей</p>
+                        <p>{{ _("guest reception") }}</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="about hotel">
-            <h2>Про Готель</h2>
-
+            <h2>{{ _("About the Hotel") }}</h2>
             <div class="perspective">
                 <div class="per">
-                    <img src="static/img/bed.png" alt="">
-                    <p>Комфортні номери</p>
+                    <img src="{{ url_for('static', filename='img/bed.png') }}" alt="">
+                    <p>{{ _("Comfortable rooms") }}</p>
                 </div>
-
                 <div class="per">
-                    <img src="static/img/cafe.png" alt="">
-                    <p>Кафе української кухні</p>
+                    <img src="{{ url_for('static', filename='img/cafe.png') }}" alt="">
+                    <p>{{ _("Ukrainian cuisine cafe") }}</p>
                 </div>
-
                 <div class="per">
-                    <img src="static/img/parking.png" alt="">
-                    <p>Паркінг для гостей</p>
+                    <img src="{{ url_for('static', filename='img/parking.png') }}" alt="">
+                    <p>{{ _("Guest parking") }}</p>
                 </div>
-
                 <div class="per">
-                    <img src="static/img/wifi.png" alt="">
-                    <p>Wi-Fi на всій території</p>
+                    <img src="{{ url_for('static', filename='img/wifi.png') }}" alt="">
+                    <p>{{ _("Wi-Fi throughout the property") }}</p>
                 </div>
-
                 <div class="per">
-                    <img src="static/img/clining.png" alt="">
-                    <p>Щоденне прибирання</p>
+                    <img src="{{ url_for('static', filename='img/clining.png') }}" alt="">
+                    <p>{{ _("Daily cleaning") }}</p>
                 </div>
-
                 <div class="per">
-                    <img src="static/img/breakfest.png" alt="">
-                    <p>Сніданки включено</p>
+                    <img src="{{ url_for('static', filename='img/breakfest.png') }}" alt="">
+                    <p>{{ _("Breakfast included") }}</p>
                 </div>
             </div>
         </section>
 
         <section class="rooms" id="rooms">
-            <h2>Номери</h2>
+            <h2>{{ _("Cottages") }}</h2>
 
+            {% for cottage in cottages %}
             <div class="room">
                 <section class="gallery">
-
                     <div class="gallery-main">
-                        <img loading="lazy" class="main-slide active" src="static/img/vodogray.png" alt="">
-                        <img loading="lazy" class="main-slide" src="static/img/retro_bell.png" alt="">
-                        <img loading="lazy" class="main-slide" src="static/img/retro_coffe.png" alt="">
+                        {% for photo in cottage.photos %}
+                        <img loading="lazy" class="main-slide {% if loop.first %}active{% endif %}" src="{{ photo.image_url }}" alt="{{ photo.alt_text or cottage.localized_name }}">
+                        {% else %}
+                        <img loading="lazy" class="main-slide active" src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ cottage.localized_name }}">
+                        {% endfor %}
                     </div>
-
                     <div class="gallery-preview">
-                        <img class="preview active" src="static/img/vodogray.png">
-                        <img class="preview" src="static/img/retro_bell.png">
-                        <img class="preview" src="static/img/retro_coffe.png">
+                        {% for photo in cottage.photos %}
+                        <img class="preview {% if loop.first %}active{% endif %}" src="{{ photo.image_url }}" alt="{{ photo.alt_text or cottage.localized_name }}">
+                        {% else %}
+                        <img class="preview active" src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ cottage.localized_name }}">
+                        {% endfor %}
                     </div>
-
                 </section>
 
                 <div class="info">
-                    <h1>Стандартний номер</h1>
-
+                    <h1>{{ cottage.localized_name }}</h1>
+                    {% if cottage.localized_description %}
+                    <p class="description">{{ cottage.localized_description }}</p>
+                    {% endif %}
                     <div class="include">
+                        {% for feature in cottage.feature_list %}
                         <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Двоспальне ліжко</p>
+                            <img src="{{ url_for('static', filename='img/checkbox.png') }}" alt="">
+                            <p>{{ feature }}</p>
                         </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Wi-Fi</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Кондиціонер</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Рушники</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Телевізор</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Тераса</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Ванна кімната</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Душ</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Робочий стіл</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Фен</p>
-                        </div>
+                        {% endfor %}
                     </div>
-
                     <div class="price">
-                        <p>Від</p>
-                        <h2>1800</h2>
-
-                        <!-- <button class="order-btn">Детальніше</button> -->
+                        <p>{{ _("From") }}</p>
+                        <h2>{{ cottage.price }}</h2>
+                        <span>{{ _("UAH / night") }}</span>
                     </div>
                 </div>
             </div>
+            {% else %}
+            <p class="empty-state">{{ _("Cottages will appear on the site soon.") }}</p>
+            {% endfor %}
         </section>
 
         <section class="history" id="history">
             <div class="info">
-                <h1>Наша історія</h1>
-                <h2>Понад 20 років гостинності та домашнього затишку</h2>
-                <p>Від невеликого придорожнього комплексу до сучасного
-                    готелю з комфортними номерами та затишним кафе наш шлях
-                    був наповнений працею, розвитком та щирим бажанням
-                    дарувати гостям тепло і турботу.</p>
-                <p>Сьогодні «Водограй» — це поєднання традиційної
-                    української гостинності та європейського сервісу в
-                    самому серці Києва.</p>
+                <h1>{{ _("Our History") }}</h1>
+                <h2>{{ _("Over 20 years of hospitality and homelike comfort") }}</h2>
+                <p>{{ _("From a small roadside complex to a modern hotel with comfortable rooms and a cozy cafe, our path has been shaped by work, growth, and a desire to give guests warmth.") }}</p>
+                <p>{{ _("Today, Vodogray combines Ukrainian hospitality with European service.") }}</p>
             </div>
             <div class="history-slider">
                 <div class="slideshow">
                     <div class="slide">
-                        <img src="static/img/retro_vodoray.png" alt="">
+                        <img src="{{ url_for('static', filename='img/retro_vodoray.png') }}" alt="">
                         <div class="title">
                             <h2>2001</h2>
-                            <h2>Початок історії</h2>
+                            <h2>{{ _("The Beginning") }}</h2>
                         </div>
-                        <p>Саме з цього року розпочалася історія готелю-кафе
-                            «Водограй». Ми відкрили двері для перших гостей з
-                            бажанням створити місце, де кожен почуватиметься як
-                            вдома.</p>
+                        <p>{{ _("This was the year when the history of Vodogray Hotel and Cafe began.") }}</p>
                     </div>
                     <div class="slide">
-                        <img src="static/img/retro_coffe.png" alt="">
+                        <img src="{{ url_for('static', filename='img/retro_coffe.png') }}" alt="">
                         <div class="title">
-                            <h2>Затишне кафе</h2>
+                            <h2>{{ _("Cozy Cafe") }}</h2>
                         </div>
-                        <p>Кафе «Водограй» це смачна українська кухня,
-                            традиційні рецепти та тепла атмосфера.</p>
+                        <p>{{ _("Vodogray cafe offers delicious Ukrainian cuisine, traditional recipes, and a warm atmosphere.") }}</p>
                     </div>
                     <div class="slide">
-                        <img src="static/img/retro_room.png" alt="">
+                        <img src="{{ url_for('static', filename='img/retro_room.png') }}" alt="">
                         <div class="title">
-                            <h2>Комфорт для кожного</h2>
+                            <h2>{{ _("Comfort for Everyone") }}</h2>
                         </div>
-                        <p>Наші номери - це поєднання зручності, чистоти та
-                            затишку. Ми дбаємо про кожну деталь, щоб ви могли
-                            повноцінно відпочити.</p>
+                        <p>{{ _("Our rooms combine convenience, cleanliness, and comfort.") }}</p>
                     </div>
                     <div class="slide">
-                        <img src="static/img/retro_bell.png" alt="">
+                        <img src="{{ url_for('static', filename='img/retro_bell.png') }}" alt="">
                         <div class="title">
-                            <h2>Подяка гостям</h2>
+                            <h2>{{ _("Thanks to Our Guests") }}</h2>
                         </div>
-                        <p>Ми вдячні кожному гостю за довіру та вибір.
-                            Запрошуємо і надалі ставати частиною історії
-                            «Водограю»!</p>
+                        <p>{{ _("We are grateful to every guest for their trust and choice.") }}</p>
                     </div>
                     <div class="slide">
-                        <img src="static/img/retro_comand.png" alt="">
+                        <img src="{{ url_for('static', filename='img/retro_comand.png') }}" alt="">
                         <div class="title">
-                            <h2>Наша команда</h2>
+                            <h2>{{ _("Our Team") }}</h2>
                         </div>
-                        <p>Головна цінність «Водограю» — це люди.</p>
-                        <p>Наша команда професіоналів щодня працює для того,
-                            щоб ваш відпочинок був комфортним, а враження
-                            найкращими.</p>
+                        <p>{{ _("A professional team works every day to make your stay comfortable.") }}</p>
                     </div>
                 </div>
-
                 <div class="history-buttons">
-
                     <button class="history-prev">&#10094;</button>
-
                     <button class="history-next">&#10095;</button>
-
                 </div>
             </div>
         </section>
 
         <section class="holl" id="holl">
-            <h2>Бенкетні зали</h2>
+            <h2>{{ _("Banquet Halls") }}</h2>
 
+            {% for hall in halls %}
             <div class="hotel-holl">
                 <section class="gallery">
-
                     <div class="gallery-main">
-                        <img loading="lazy" class="main-slide active" src="static/img/vodogray.png" alt="">
-                        <img loading="lazy" class="main-slide" src="static/img/retro_bell.png" alt="">
-                        <img loading="lazy" class="main-slide" src="static/img/retro_coffe.png" alt="">
+                        {% for photo in hall.photos %}
+                        <img loading="lazy" class="main-slide {% if loop.first %}active{% endif %}" src="{{ photo.image_url }}" alt="{{ photo.alt_text or hall.localized_name }}">
+                        {% else %}
+                        <img loading="lazy" class="main-slide active" src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ hall.localized_name }}">
+                        {% endfor %}
                     </div>
-
                     <div class="gallery-preview">
-                        <img class="preview active" src="static/img/vodogray.png">
-                        <img class="preview" src="static/img/retro_bell.png">
-                        <img class="preview" src="static/img/retro_coffe.png">
+                        {% for photo in hall.photos %}
+                        <img class="preview {% if loop.first %}active{% endif %}" src="{{ photo.image_url }}" alt="{{ photo.alt_text or hall.localized_name }}">
+                        {% else %}
+                        <img class="preview active" src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ hall.localized_name }}">
+                        {% endfor %}
                     </div>
-
                 </section>
 
                 <div class="info">
-                    <h1>Великий зал</h1>
-
+                    <h1>{{ hall.localized_name }}</h1>
+                    {% if hall.localized_description %}
+                    <p class="description">{{ hall.localized_description }}</p>
+                    {% endif %}
                     <div class="include">
+                        {% for feature in hall.feature_list %}
                         <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>До 100 осіб</p>
+                            <img src="{{ url_for('static', filename='img/checkbox.png') }}" alt="">
+                            <p>{{ feature }}</p>
                         </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Сцена та танцпол</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Фотозона</p>
-                        </div>
-
-                        <div class="incl">
-                            <img src="static/img/checkbox.png" alt="">
-                            <p>Спеціальні меню</p>
-                        </div>
+                        {% endfor %}
                     </div>
-
+                    {% if hall.booking_from %}
                     <div class="book">
-                        <p>Бронювання від</p>
-                        <h2>09 липня 2026</h2>
+                        <p>{{ _("Booking from") }}</p>
+                        <h2>{{ hall.booking_from }}</h2>
                     </div>
-
+                    {% endif %}
                     <div class="price">
-                        <p>Від</p>
-                        <h2>1800</h2>
+                        <p>{{ _("From") }}</p>
+                        <h2>{{ hall.price }}</h2>
+                        <span>{{ _("UAH") }}</span>
                     </div>
                 </div>
             </div>
+            {% else %}
+            <p class="empty-state">{{ _("Banquet halls will appear on the site soon.") }}</p>
+            {% endfor %}
         </section>
 
         <section class="contacts">
-            <img src="static/img/vodogray.png" alt="">
-
+            <img src="{{ url_for('static', filename='img/vodogray.png') }}" alt="{{ _('Vodogray') }}">
             <div class="contact">
-                <h2>Контакти</h2>
-
+                <h2>{{ _("Contacts") }}</h2>
                 <div class="cont">
-                    <img src="static/img/loc.png" alt="">
-                    <p>м. Київ вул. Равуцького 7</p>
+                    <img src="{{ url_for('static', filename='img/loc.png') }}" alt="">
+                    <p>{{ _("Kyiv, Ravutskoho St. 7") }}</p>
                 </div>
-
                 <div class="cont">
-                    <img src="static/img/phone2.png" alt="">
+                    <img src="{{ url_for('static', filename='img/phone2.png') }}" alt="">
                     <p>+380 97 688 67 71</p>
                 </div>
-
                 <div class="cont">
-                    <img src="static/img/mail.png" alt="">
+                    <img src="{{ url_for('static', filename='img/mail.png') }}" alt="">
                     <p>dmon@ukr.net</p>
                 </div>
-
                 <div class="cont">
-                    <img src="static/img/insta.png" alt="">
+                    <img src="{{ url_for('static', filename='img/insta.png') }}" alt="">
                     <a href="">@instagram</a>
                 </div>
-
                 <div class="cont">
-                    <img src="static/img/clock.png" alt="">
-                    <p>Щодня 00:00 - 24:00</p>
+                    <img src="{{ url_for('static', filename='img/clock.png') }}" alt="">
+                    <p>{{ _("Daily 00:00 - 24:00") }}</p>
                 </div>
-
-                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3002357,31.3569275" target="_blank"
-                    class="route-btn">Побудувати маршрут</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3002357,31.3569275" target="_blank" class="route-btn">{{ _("Build Route") }}</a>
             </div>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548.55491405534!2d31.354352576548443!3d50.30023567156378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4f891bfe028f3%3A0xac3134dce2298d82!2z0JPQvtGC0LXQu9GM0L3QuNC5INC60L7QvNC_0LvQtdC60YEg0JLQvtC00L7Qs9GA0LDQuQ!5e0!3m2!1suk!2sua!4v1783181381148!5m2!1suk!2sua"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548.55491405534!2d31.354352576548443!3d50.30023567156378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4f891bfe028f3%3A0xac3134dce2298d82!2z0JPQvtGC0LXQu9GM0L3QuNC5INC60L7QvNC_0LvQtdC60YEg0JLQvtC00L7Qs9GA0LDQuQ!5e0!3m2!1suk!2sua!4v1783181381148!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </section>
 
-        <script src="static/js/slideshow.js"></script>
-        <script src="static/js/rooms_slideshow.js"></script>
-
+        <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/rooms_slideshow.js') }}"></script>
     </main>
 
     {% include "footer.html" %}

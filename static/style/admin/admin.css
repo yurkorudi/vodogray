@@ -1,43 +1,224 @@
-.admin{
-    display: none;
-    flex-direction: column;
+body.admin-body {
+    min-height: 100vh;
+    background: #f5f2ec;
+    color: #2f3136;
+    font-family: Arial, sans-serif;
+}
+
+.toast-wrap {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: min(360px, calc(100% - 32px));
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 15px;
+    padding: 24px;
 }
 
-.admin div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    gap: 35px;
-    margin-bottom: 35px;
+.login-card {
+    width: min(420px, 100%);
+    background: #ffffff;
+    border: 1px solid #e5dfd3;
+    border-radius: 8px;
+    box-shadow: 0 18px 50px rgba(31, 33, 37, .12);
+    padding: 32px;
 }
 
-.admin div img{
-    width: 360px;
-    height: 360px;
+.login-card h1 {
+    color: #15304d;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
-.admin div .info{
+.login-card p {
+    color: #6b6257;
+    margin-bottom: 24px;
+}
+
+.login-card form,
+.admin-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    border: 2px solid gold;
-    padding: 35px;
-    margin-bottom: 0;
-
-    height: 290px;
+    gap: 14px;
 }
 
-.admin div .info h2{
-    font-size: 18px;
-    text-align: start;
-    font-weight: 300;
+.admin-nav {
+    background: #15304d;
+}
 
-    width: 100%;
+.admin-nav .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-nav .lang-switch a {
+    color: #ffffff;
+}
+
+.admin-nav .lang-switch a.active {
+    color: #ffffff;
+}
+
+.admin-shell {
+    width: min(1320px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0 60px;
+}
+
+.admin-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e5dfd3;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+.admin-hero p,
+.section-title p {
+    color: #796f62;
+    margin: 0;
+}
+
+.admin-hero h1,
+.section-title h2 {
+    color: #15304d;
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats span {
+    background: #e4dfd5;
+    border-radius: 999px;
+    color: #15304d;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.admin-section {
+    margin-bottom: 36px;
+}
+
+.section-title {
+    margin-bottom: 16px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.admin-card {
+    background: #ffffff;
+    border: 1px solid #e5dfd3;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.admin-card h3 {
+    color: #15304d;
+    font-size: 20px;
+    margin: 0;
+}
+
+.table-card,
+.photo-list {
+    gap: 18px;
+}
+
+.edit-row,
+.photo-row {
+    position: relative;
+    border: 1px solid #eee8dd;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fffdf9;
+}
+
+.delete-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.row-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.photo-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+}
+
+.photo-row img {
+    width: 120px;
+    height: 96px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #e4dfd5;
+}
+
+.form-label {
+    color: #453f38;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #15304d;
+    border-color: #15304d;
+}
+
+.btn-primary:hover {
+    background: #bd9765;
+    border-color: #bd9765;
+}
+
+.btn-success {
+    background: #2f6f4e;
+    border-color: #2f6f4e;
+}
+
+.empty {
+    color: #796f62;
+    margin: 0;
+}
+
+@media (max-width: 980px) {
+    .content-grid,
+    .photo-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-hero,
+    .row-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
